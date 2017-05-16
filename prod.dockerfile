@@ -1,5 +1,5 @@
-FROM jshimko/meteor-launchpad:base
-MAINTAINER Jeremy Shimko <jeremy.shimko@gmail.com>
+FROM jasondearte/meteor-launchpad:base
+MAINTAINER Jason De Arte <Jason.DeArte@gmail.com>
 
 # copy the app to the container
 ONBUILD COPY . $APP_SOURCE_DIR
@@ -8,6 +8,7 @@ ONBUILD COPY . $APP_SOURCE_DIR
 ONBUILD RUN bash $BUILD_SCRIPTS_DIR/install-phantom.sh
 ONBUILD RUN bash $BUILD_SCRIPTS_DIR/install-mongo.sh
 ONBUILD RUN bash $BUILD_SCRIPTS_DIR/install-graphicsmagick.sh
+ONBUILD RUN bash $BUILD_SCRIPTS_DIR/install-aptget-packages.sh
 
 # install Meteor, build app, clean up
 ONBUILD RUN cd $APP_SOURCE_DIR && \

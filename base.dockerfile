@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Jeremy Shimko <jeremy.shimko@gmail.com>
+MAINTAINER Jason De Arte <Jason.DeArte@gmail.com>
 
 RUN groupadd -r node && useradd -m -g node node
 
@@ -18,6 +18,9 @@ ENV PHANTOM_VERSION 2.1.1
 
 # Optionally Install Graphicsmagick
 ENV INSTALL_GRAPHICSMAGICK false
+
+# Optionally Install the listed apt-get packages
+ENV INSTALL_APTGET_PACKAGES ""
 
 # build directories
 ENV APP_SOURCE_DIR /opt/meteor/src
