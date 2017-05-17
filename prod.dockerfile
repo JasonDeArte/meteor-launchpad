@@ -1,5 +1,5 @@
-FROM jshimko/meteor-launchpad:base
-MAINTAINER Jeremy Shimko <jeremy.shimko@gmail.com>
+FROM jasondearte/meteor-launchpad:base
+MAINTAINER Jason De Arte <Jason.DeArte@gmail.com>
 
 # copy the app to the container
 ONBUILD COPY . $APP_SOURCE_DIR
