@@ -3,7 +3,7 @@
 set -e
 
 if [ -f $APP_SOURCE_DIR/launchpad.conf ]; then
-  source <(grep INSTALL_APTGET $APP_SOURCE_DIR/launchpad.conf)
+  source <(grep INSTALL_APTGET_PACKAGES $APP_SOURCE_DIR/launchpad.conf)
 fi
 
 if [ ! -z "$INSTALL_APTGET_PACKAGES" ]; then
