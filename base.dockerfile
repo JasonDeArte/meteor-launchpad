@@ -3,7 +3,7 @@ MAINTAINER Jason De Arte <Jason.DeArte@gmail.com>
 
 RUN groupadd -r node && useradd -m -g node node
 
-ENV NODE_VERSION 4.8.2
+ENV NODE_VERSION 8.11.2
 ENV GOSU_VERSION 1.10
 
 # Optionally Install MongoDB
